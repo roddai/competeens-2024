@@ -1,0 +1,29 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  width: 20%;
+  margin-top: 30px;
+  align-self: center;
+}
+
+h1 {
+  text-align: center;
+  padding: 30px;
+  text-transform: uppercase;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0% 30%;
+}
