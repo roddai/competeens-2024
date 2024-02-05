@@ -20,21 +20,27 @@
 
   <main>
     <form action="">
-      <div class="input-group mb-4">
+      <section class="input-group mb-4">
         <span class="input-group-text"><i class="bi bi-person"></i></span>
-        <div class="form-floating">
-          <select class="form-select" aria-label="Default select example"></select>
+        <section class="form-floating">
+          <select class="form-select" aria-label="Default select example">
+            <option value=""></option>
+          </select>
           <label for="floatingInputGroup1">Qual o seu nome?</label>
-        </div>
-      </div>
+        </section>
+      </section>
 
-      <div class="input-group mb-4">
+      <section class="input-group mb-4">
         <span class="input-group-text"><i class="bi bi-person"></i></span>
-        <div class="form-floating">
-          <input type="text" class="form-control" id="floatingInputGroup2" placeholder="Username">
-          <label for="floatingInputGroup2">Qual a sua senha?</label>
-        </div>
-      </div>
+        <section class="form-floating">
+          <input type="password" class="form-control" id="password" placeholder="Username">
+          <label for="password">Qual a sua senha?</label>
+        </section>
+      </section>
+
+      <section>
+        <p id="message"></p>
+      </section>
 
       <button type="submit" class="btn btn-info">Entrar</button>
     </form>

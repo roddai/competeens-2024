@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: rgb(42, 56, 128);
+  display: flex;
+  flex-direction: column;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -16,6 +22,7 @@ img {
 }
 
 h1 {
+  color: orange;
   text-align: center;
   padding: 30px;
   text-transform: uppercase;
@@ -26,4 +33,19 @@ form {
   flex-direction: column;
   align-items: center;
   margin: 0% 30%;
+}
+
+#message {
+  color: orangered;
+}
+
+#back {
+  align-self: center;
+}
+
+.teen-name {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
 }
