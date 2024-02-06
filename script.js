@@ -88,7 +88,7 @@ const clickBackButton = () => backButton
   .addEventListener('click', () => window.location.href = 'https://roddai.github.io/competeens-2024');
 
 window.onload = () => {
-  if (window.location.href === 'http://127.0.0.1:5500/index.html' || window.location.href === 'http://127.0.0.1:5500/index.html?' || window.location.href === 'https://roddai.github.io/competeens-2024' || window.location.href === 'https://roddai.github.io/competeens-2024?') {
+  if (window.location.href === 'https://roddai.github.io/competeens-2024' || window.location.href === 'https://roddai.github.io/competeens-2024?') {
     addOptions(data);
     clickEntryButton(data);
   } else {
