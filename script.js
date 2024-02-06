@@ -40,6 +40,7 @@ const verifyLogin = (arrayTeens, teenName, password) => {
 
   if (objectTeen.password === password) {
     window.location.href = 'https://roddai.github.io/competeens-2024/teen-score.html';
+    // window.location.href = 'http://127.0.0.1:5500/teen-score.html';
     testFunction(objectTeen);
   } else {
     throw new Error('Usuário ou senha inválido(a)!');
@@ -86,7 +87,7 @@ const getArrayWithScores = ({ teens }) => teens
 
 const clickBackButton = () => backButton
   // .addEventListener('click', () => window.location.href = 'https://roddai.github.io/competeens-2024');
-  .addEventListener('click', () => window.history.back);
+  .addEventListener('click', () => window.history.back());
 
 window.onload = () => {
   if (window.location.href === 'https://roddai.github.io/competeens-2024' || window.location.href === 'https://roddai.github.io/competeens-2024?') {
