@@ -25,7 +25,6 @@ const clickEntryButton = ({ teens }) => {
 
     try {
       verifyLogin(teens, inputName, inputPassword);
-      console.log('Teste');
     } catch (error) {
       paragraph.innerText = error.message;
     }
@@ -60,17 +59,38 @@ const addTeenName = () => {
 }
 
 const addScoreInfo = ({ name, score }) => {
-  console.log(name);
-  console.log(score);
   const main = document.querySelector('main');
-  console.log(main);
+  const maxScore = verifyMaxScore(data);
+  const arrayWithScores = getArrayWithScores(data);
+  const position = arrayWithScores.findIndex((number) => number === score) + 1;
+
+  for (let index = 0; index <= 2; index += 1) {
+    createElement(main, 'div', '', `score-position${index}`);
+  }
+
+  createBlockScore('Maior pontuação', maxScore, '.score-position0');
+  createBlockScore('Sua pontuação', score, '.score-position1');
+  createBlockScore('Sua posição no hanking', position, '.score-position2');
 }
+
+const createBlockScore = (text, number, className) => {
+  const div = document.querySelector(className);
+  createElement(div, 'p', text, 'text-score-type');
+  createElement(div, 'p', number, 'score-type');
+}
+
+const verifyMaxScore = ({ teens }) => teens
+  .reduce((acc, score) => Math.max(acc, score.score), -Infinity);
+
+const getArrayWithScores = ({ teens }) => teens
+  .map(({ score }) => score)
+  .sort((a, b) => b - a);
 
 const clickBackButton = () => backButton
   .addEventListener('click', () => window.location = 'http://127.0.0.1:5500/index.html?');
 
 window.onload = () => {
-  if (window.location.href === 'http://127.0.0.1:5500/index.html?') {
+  if (window.location.href === 'http://127.0.0.1:5500/index.html' || window.location.href === 'http://127.0.0.1:5500/index.html?') {
     addOptions(data);
     clickEntryButton(data);
   } else {
@@ -78,8 +98,3 @@ window.onload = () => {
     addTeenName();
   }
 }
-
-// const max = data.teens.reduce((acc, score) => {
-//   return Math.max(acc, score.score);
-// }, -Infinity)
-// console.log(max);

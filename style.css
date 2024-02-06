@@ -49,3 +49,41 @@ form {
   text-transform: uppercase;
   font-size: 25px;
 }
+
+.main {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.main div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 30px;
+  padding: 10px;
+  width: 300px;
+  border-radius: 20px;
+}
+
+.text-score-type {
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+}
+
+.score-type {
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+}
+
+.score-position0 {
+  background: linear-gradient(90deg, rgb(3, 89, 46) 0%, rgb(17, 121, 76) 35%, rgb(4, 135, 32) 100%);
+}
+
+.score-position1 {
+  background: linear-gradient(90deg, rgb(1, 37, 137) 0%, rgb(18, 45, 196) 35%, rgb(72, 86, 211) 100%);
+}
+
+.score-position2 {
+  background: linear-gradient(90deg, rgb(152, 1, 132) 0%, rgb(187, 2, 178) 35%, rgb(240, 65, 232) 100%);
+}
