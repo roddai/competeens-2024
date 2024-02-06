@@ -15,7 +15,7 @@ const createElement = (parentElement, element, text, className) => {
 }
 
 const addOptions = ({ teens }) => teens
-  .forEach((teen) => createElement(selectElement, 'option', teen.name, ''));
+  .forEach((teen) => createElement(selectElement, 'option', teen.name, 'option-teen-name display-1'));
 
 const clickEntryButton = ({ teens }) => {
   entryButton.addEventListener('click', (event) => {
@@ -46,9 +46,7 @@ const verifyLogin = (arrayTeens, teenName, password) => {
   }
 }
 
-const testFunction = ({ name, score }) => {
-  localStorage.setItem('teenName', JSON.stringify({ name, score }))
-}
+const testFunction = ({ name, score }) => localStorage.setItem('teenName', JSON.stringify({ name, score }));
 
 const addTeenName = () => {
   const paragraphName = document.querySelector('.teen-name');

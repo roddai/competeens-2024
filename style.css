@@ -87,3 +87,31 @@ form {
 .score-position2 {
   background: linear-gradient(90deg, rgb(152, 1, 132) 0%, rgb(187, 2, 178) 35%, rgb(240, 65, 232) 100%);
 }
+
+@media screen and (max-width: 600px) {
+  img {
+    width: 60%;
+  }
+
+  form {
+    margin: 0px 30px;
+  }
+
+  .option-teen-name {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 10px;
+    color: red
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main div {
+    margin-bottom: 10px;
+  }
+}
