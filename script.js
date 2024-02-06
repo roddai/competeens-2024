@@ -85,16 +85,18 @@ const getArrayWithScores = ({ teens }) => teens
   .map(({ score }) => score)
   .sort((a, b) => b - a);
 
-const clickBackButton = () => backButton
-  // .addEventListener('click', () => window.location.href = 'https://roddai.github.io/competeens-2024');
-  .addEventListener('click', () => window.history.back());
+const goBack = () => window.history.back();
+
+// const clickBackButton = () => backButton
+// .addEventListener('click', () => window.location.href = 'https://roddai.github.io/competeens-2024');
+// .addEventListener('click', () => window.history.back());
 
 window.onload = () => {
   if (window.location.href === 'https://roddai.github.io/competeens-2024' || window.location.href === 'https://roddai.github.io/competeens-2024?') {
     addOptions(data);
     clickEntryButton(data);
   } else {
-    clickBackButton();
+    // clickBackButton();
     addTeenName();
   }
 }
