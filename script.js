@@ -47,12 +47,12 @@ const verifyLogin = (arrayTeens, teenName, password) => {
   }
 }
 
-const testFunction = ({ name, score }) => localStorage.setItem('teenName', JSON.stringify({ name, score }));
+const testFunction = ({ name, score }) => localStorage.setItem('teenName', JSON.stringify({ nome: name, score }));
 
 const addTeenName = () => {
   const paragraphName = document.querySelector('.teen-name');
   const recoveryObject = JSON.parse(localStorage.getItem('teenName'));
-  paragraphName.innerHTML = `${recoveryObject.name}`;
+  paragraphName.innerHTML = `${recoveryObject.nome}`;
 
   addScoreInfo(recoveryObject);
 }
@@ -93,6 +93,7 @@ const goBack = () => window.history.back();
 
 window.onload = () => {
   if (window.location.href === 'https://roddai.github.io/competeens-2024' || window.location.href === 'https://roddai.github.io/competeens-2024?') {
+    // if (window.location.href === 'http://127.0.0.1:5500/index.html' || window.location.href === 'http://127.0.0.1:5500/index.html?') {
     addOptions(data);
     clickEntryButton(data);
   } else {
