@@ -42,7 +42,6 @@ form {
 
 #back {
   align-self: center;
-  margin-bottom: 30px;
 }
 
 .teen-name {
@@ -116,5 +115,9 @@ form {
 
   .main div {
     margin-bottom: 10px;
+  }
+
+  #back {
+    margin-bottom: 50px;
   }
 }
