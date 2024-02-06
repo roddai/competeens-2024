@@ -39,7 +39,8 @@ const verifyLogin = (arrayTeens, teenName, password) => {
   const objectTeen = arrayTeens.find(({ name }) => name === teenName);
 
   if (objectTeen.password === password) {
-    window.location.href = 'http://127.0.0.1:5500/teen-score.html';
+    // window.location.href = 'http://127.0.0.1:5500/teen-score.html';
+    window.location.href = 'https://roddai.github.io/competeens-2024/teen-score.html';
     testFunction(objectTeen);
   } else {
     throw new Error('Usuário ou senha inválido(a)!');
