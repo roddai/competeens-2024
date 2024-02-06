@@ -85,7 +85,8 @@ const getArrayWithScores = ({ teens }) => teens
   .sort((a, b) => b - a);
 
 const clickBackButton = () => backButton
-  .addEventListener('click', () => window.location.href = 'https://roddai.github.io/competeens-2024');
+  // .addEventListener('click', () => window.location.href = 'https://roddai.github.io/competeens-2024');
+  .addEventListener('click', () => window.history.back);
 
 window.onload = () => {
   if (window.location.href === 'https://roddai.github.io/competeens-2024' || window.location.href === 'https://roddai.github.io/competeens-2024?') {
