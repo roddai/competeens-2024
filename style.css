@@ -14,12 +14,12 @@ header {
   display: flex;
   flex-direction: column;
 }
-/* 
+
 img {
   width: 20%;
   margin-top: 30px;
   align-self: center;
-} */
+}
 
 h1 {
   color: orange;

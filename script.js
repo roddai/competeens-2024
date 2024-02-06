@@ -3,8 +3,6 @@ const entryButton = document.querySelector('button');
 const paragraph = document.querySelector('#message');
 const backButton = document.querySelector('#back');
 
-// const teensNames = data.teens.map((teen) => teen.name);
-
 const createElement = (parentElement, element, text, className) => {
   const newElement = document.createElement(element);
 
@@ -40,7 +38,6 @@ const verifyLogin = (arrayTeens, teenName, password) => {
 
   if (objectTeen.password === password) {
     window.location.href = 'https://roddai.github.io/competeens-2024/teen-score.html';
-    // window.location.href = 'http://127.0.0.1:5500/teen-score.html';
     addInfoLocalStorage(objectTeen);
   } else {
     throw new Error('Usuário ou senha inválido(a)!');
@@ -87,23 +84,11 @@ const getArrayWithScores = ({ teens }) => teens
 
 const goBack = () => window.history.back();
 
-// const clickBackButton = () => backButton
-// .addEventListener('click', () => window.location.href = 'https://roddai.github.io/competeens-2024');
-// .addEventListener('click', () => window.history.back());
-
 window.onload = () => {
-  // if (window.location.href === 'https://roddai.github.io/competeens-2024' || window.location.href === 'https://roddai.github.io/competeens-2024?') {
-  // if (window.location.href === 'http://127.0.0.1:5500/index.html' || window.location.href === 'http://127.0.0.1:5500/index.html?') {
-  // addOptions(data);
-  // clickEntryButton(data);
-  // } else {
-  // clickBackButton();
-  // if (window.location.href === 'http://127.0.0.1:5500/teen-score.html') {
   if (window.location.href === 'https://roddai.github.io/competeens-2024/teen-score.html') {
     addTeenName();
   } else {
     addOptions(data);
     clickEntryButton(data);
   }
-  // }
 }
