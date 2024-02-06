@@ -41,13 +41,13 @@ const verifyLogin = (arrayTeens, teenName, password) => {
   if (objectTeen.password === password) {
     window.location.href = 'https://roddai.github.io/competeens-2024/teen-score.html';
     // window.location.href = 'http://127.0.0.1:5500/teen-score.html';
-    testFunction(objectTeen);
+    addInfoLocalStorage(objectTeen);
   } else {
     throw new Error('Usuário ou senha inválido(a)!');
   }
 }
 
-const testFunction = ({ name, score }) => localStorage.setItem('teenName', JSON.stringify({ nome: name, score }));
+const addInfoLocalStorage = ({ name, score }) => localStorage.setItem('teenName', JSON.stringify({ nome: name, score }));
 
 const addTeenName = () => {
   const paragraphName = document.querySelector('.teen-name');
@@ -57,7 +57,7 @@ const addTeenName = () => {
   addScoreInfo(recoveryObject);
 }
 
-const addScoreInfo = ({ name, score }) => {
+const addScoreInfo = ({ score }) => {
   const main = document.querySelector('main');
   const maxScore = verifyMaxScore(data);
   const arrayWithScores = getArrayWithScores(data);
@@ -92,12 +92,18 @@ const goBack = () => window.history.back();
 // .addEventListener('click', () => window.history.back());
 
 window.onload = () => {
-  if (window.location.href === 'https://roddai.github.io/competeens-2024' || window.location.href === 'https://roddai.github.io/competeens-2024?') {
-    // if (window.location.href === 'http://127.0.0.1:5500/index.html' || window.location.href === 'http://127.0.0.1:5500/index.html?') {
+  // if (window.location.href === 'https://roddai.github.io/competeens-2024' || window.location.href === 'https://roddai.github.io/competeens-2024?') {
+  // if (window.location.href === 'http://127.0.0.1:5500/index.html' || window.location.href === 'http://127.0.0.1:5500/index.html?') {
+  // addOptions(data);
+  // clickEntryButton(data);
+  // } else {
+  // clickBackButton();
+  // if (window.location.href === 'http://127.0.0.1:5500/teen-score.html') {
+  if (window.location.href === 'https://roddai.github.io/competeens-2024/teen-score.html') {
+    addTeenName();
+  } else {
     addOptions(data);
     clickEntryButton(data);
-  } else {
-    // clickBackButton();
-    addTeenName();
   }
+  // }
 }
